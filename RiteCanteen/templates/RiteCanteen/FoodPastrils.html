@@ -1,0 +1,475 @@
+ {% extends 'pestrilfood.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+
+{% block content %}
+<!-- section 1 for standards-->
+
+
+<style>
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 300, 600, 700);
+
+      html {
+        font-family: "Open Sans", sans-serif;
+      }
+      .cup .btn {
+        position: absolute;
+        top: 40%;
+        border-radius: 15px;
+
+        left: 48%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        font-size: 16px;
+        padding: 12px 24px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+
+      body {
+        font-family: Arial;
+        font-size: 17px;
+      }
+      
+      .food {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      
+      .food img {vertical-align: middle;}
+      
+      .food .note {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+      }
+
+
+      .blink69 {
+        animation: blinker 6s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+        
+      }
+
+
+
+      .blink29 {
+        animation: blinker 6s linear infinite;
+        color: black;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+        
+      }
+
+
+
+      .glow98 {
+        text-shadow: 0 0 5px gold, 0 0 10px gold,
+        0 0 20px gold, 0 0 40px gold;
+      }
+
+
+
+      .glow01 {
+        text-shadow: 0 0 5px darkGreen	, 0 0 10px darkGreen	,
+        0 0 20px darkgreen	, 0 0 40px darkGreen	;
+      }
+
+      .navbar-toggler-icon {
+        background-image: none!important;
+        background-color: darkslategrey;
+        height: 3px;
+        width: 25px;
+        margin: 10px 0;
+        position: relative;
+        transition: all 0.35s ease-out;
+        transform-origin: center;
+      }
+      .navbar-toggler-icon::before {
+        display: block;
+        background-color: darkslategrey;
+        height: 3px;
+        content: "";
+        position: relative;
+        top: -7px;
+        transition: all 0.15s ease-out;/*taken down to hide quicker*/
+        transform-origin: center;
+      }
+
+      .navbar-toggler-icon::after {
+        display: block;
+        background-color: darkslategrey;
+        height: 3px;
+        content: "";
+        position: relative;
+        top: 4px;
+  }
+
+
+  .glow9 {
+    text-shadow: 0 0 5px gold, 0 0 10px gold,
+    0 0 20px gold, 0 0 40px gold;
+  }
+   
+  .glow68 {
+    text-shadow: 0 0 5px gold, 0 0 10px gold,
+    0 0 20px gold, 0 0 40px gold;
+  }   
+
+  .glow977 {
+    text-shadow: 0 0 5px white, 0 0 10px white,
+    0 0 20px white, 0 0 40px white;
+  }
+
+  .blink9 {
+    animation: blinker 6s linear infinite;
+    color: yellow;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+
+  } 
+  
+  
+    .blink90 {
+      animation: blinker 6s linear infinite;
+      color: orange;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }  
+    }
+
+
+
+ .blink900 {
+      animation: blinker 2s linear infinite;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }  
+    }
+
+
+   .blink908 {
+      animation: blinker 3s linear infinite;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }  
+    }
+
+
+
+    .cup .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      font-size: 16px;
+      padding: 12px 24px;
+      cursor: pointer;
+      text-align: center;
+    }
+    
+    .blink29 {
+      animation: blinker 6s linear infinite;
+      color: black;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+      
+    }
+  
+  
+  
+    .blink69 {
+      animation: blinker 6s linear infinite;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+      
+    }
+  
+  
+  
+    .glow68 {
+      text-shadow: 0 0 5px gold, 0 0 10px gold,
+      0 0 20px gold, 0 0 40px gold;
+    }
+  
+  
+  
+    .glow20 {
+      text-shadow: 0 0 5px yellow, 0 0 10px yellow,
+      0 0 20px yellow, 0 0 40px yellow;
+    }
+  
+    .glow21 {
+      text-shadow: 0 0 5px darkslategrey, 0 0 10px darkslategrey,
+      0 0 20px darkslategrey, 0 0 40px darkslategrey;
+    }
+  
+  </style>
+
+    
+
+<div class="container-fluid" style="background-color: teal">
+  <br>
+<div class="card text-center">
+{% comment %} <div class="card-header " style=" font-size: 25px;  font-family:sans-serif; font-weight:900; background-color: darkslateblue; color: DarkSlateGray">
+    </div> {% endcomment %}
+<img src="https://i.postimg.cc/bJcMTN0T/work2.gif" alt="Lights" style="width:100%">
+    
+  </div>
+  <br>
+</div>
+
+
+
+  <section id="best-features" class="text-center">
+  <div style="background-color: teal">
+    <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 37px">PASTRY CATEGORIES</h3>
+    <br>
+  </div>
+
+</section>
+
+
+
+<div class="container-fluid" style="background-color: teal">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for rites4 in rite %}
+      <div class="col ">
+        <div class=" h-100 card border-success mb-3">
+          <img height=300px src="{{rites4.image.url}}" class="border border-5" alt="...">
+          {% comment %} <img width=150px, height=200px src="{{fish.image.url}}" class="rounded-2" alt="..."> {% endcomment %}
+          <div class="card-body">
+            <h5 class="card-title"><span style="color: maroon; font-weight:900; font-size:20px; font-variant-caps: unicase">{{rites4.title}}</span></h5>
+            <p class="card-text"><span style="color: midnightblue"><b>PRICE:</b></span> <span style="color: black">{{rites4.body2 | slice:':200'}}</span></p>
+         
+
+<!-- Example single danger button -->
+ 
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: springgreen">
+        <h1 class="modal-title fs-5  glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;">Place Your Order Now</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img src="https://i.postimg.cc/Wp6hjkrs/Whats-App-Business-for-Restaurants-A-Complete-Guide-12-1200x600.jpg" alt="Lights" style="width:100%; height:100%">
+
+      <div class="modal-body" style="background-color: darkslategrey">
+        <div class="text-center">
+
+      <h3 class="glow68" style=" font-family:sans-serif; font-weight:900; color:white ">Click to Place Your Order Now</h3>
+        </div>
+      <div class="w3-container">
+        <div class="text-center">
+<a href="https://wa.me/message/DHTWPVKYGKYUN1"><span class="blink69"><img  src="https://i.postimg.cc/3Nj3dnYY/whatsapp.png" alt="Girl in a jacket" style="width:90px; height:100px; border-radius:100%"></span></a>
+        </div>      
+</div>
+      </div>
+      <div class="modal-footer" style="background-color: springgreen">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >Call ☎️</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: springgreen">
+        <h1 class="modal-title fs-5  glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;">Call to Place Your Order Now</h1>
+        
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img src="https://i.postimg.cc/524YWmV7/call.jpg" alt="Lights" style="width:100%; height:100%">
+<div class="text-center">
+      
+      <div class="modal-body" style="background-color: darkslategrey">
+        <h3 class="glow68" style=" font-family:sans-serif; font-weight:900; color:white ">Dail to Place Your Order Now</h3>
+        <h3  style=" font-family:sans-serif; font-weight:900; color:white "><a href="tel:+08103652434" style="text-decoration:none; font-weight:900;  color:white">090571474997</a></h3>
+      </div>
+    </div>
+
+      <div class="modal-footer" style="background-color: springgreen">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Chat Us💬</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center">
+      <a class="btn btn-success " data-bs-toggle="modal" href="#exampleModalToggle" role="button">Order Now</a>
+          </div>
+        
+        </div>
+          <div class="card-footer text-muted"><span style="color: indigo; font-weight:900">Last Updated:</span> 
+            <span style="color: green">{{rites4.created_on}}</span>
+          </div>
+    </div>
+  </div>
+      {% endfor %}
+
+  </div>
+
+  <br>
+  <div class="container text-center" >
+  <h1 style="color:white">You might also like:</h1>
+  <br>
+  
+  <div class="container" style="background-color: white">
+  
+      <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+              <img height=250 src="https://i.postimg.cc/ryj1TkBf/peopl-dey-eat.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'coke' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900; "> FAST MENU</h5>
+              </div>
+            </div>
+        </div>
+  
+        
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+  
+              <img height=250 src="https://i.postimg.cc/rs7XFsC6/event-image.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventPlan' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Event Planning</h5>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/1t1CNSTY/wed.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventWed' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Wedding Ceremony</h5>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/RFv1BZ29/birthday-parties.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventBirth' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Birthday Ceremony</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/xTFXR3QL/naming.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventName' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Naming Ceremony</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/6qbX2mqL/ANN.png" class="card-img-top" alt="...">
+            <a href="{% url 'EventAnn' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Anniversary Celebration</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/BQbGryB6/dieting.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventDiet' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Suitable Diet For You</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/DZ8vKdHV/hotel.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventHot' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Hotel Management</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="background-color: darkslategrey">
+            <div class="cup">
+            <img height=250 src="https://i.postimg.cc/3JnpTp8K/cafeteria.jpg" class="card-img-top" alt="...">
+            <a href="{% url 'EventCaf' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Cafeteria Management</h5>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col">
+          <div class="card"style="background-color: darkslategrey" >
+             <div class="cup">
+              <img height=250 src="https://i.postimg.cc/3NmZLqJ5/655waiter.jpg" class="card-img-top" alt="...">
+              <a href="{% url 'EventRender' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Meet Our Waiter/Waitress</h5>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+      <br>
+  </div>
+  </div>
+
+    {% endblock %}
+    
+    
