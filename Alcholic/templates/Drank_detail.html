@@ -3,7 +3,7 @@
   {% load static %}
   {% block content %}
 <style>
-  
+
 
   .cup .btn {
     position: absolute;
@@ -16,7 +16,7 @@
     cursor: pointer;
     text-align: center;
   }
-  
+
   .blink29 {
     animation: blinker 6s linear infinite;
     color: black;
@@ -25,7 +25,7 @@
     50% {
       opacity: 0;
     }
-    
+
   }
 
 
@@ -37,7 +37,7 @@
     50% {
       opacity: 0;
     }
-    
+
   }
 
 
@@ -85,9 +85,9 @@
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: springgreen">
+      <div class="modal-header" style="background-color: midnightblue">
         <h1 class="modal-title fs-5  glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;">Place Your Order Now</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <img src="https://i.postimg.cc/Wp6hjkrs/Whats-App-Business-for-Restaurants-A-Complete-Guide-12-1200x600.jpg" alt="Lights" style="width:100%; height:100%">
 
@@ -95,11 +95,11 @@
       <h3 class="glow68" style=" font-family:sans-serif; font-weight:900; color:white ">Click to Place Your Order Now</h3>
       <div class="w3-container">
 
-<span class="blink69"><img  src="https://i.postimg.cc/3Nj3dnYY/whatsapp.png" alt="Girl in a jacket" style="width:90px; height:100px; border-radius:100%"></span>
+        <a href="https://wa.me/message/UFD262DNNSMCI1"><span class="blink69"><img  src="https://i.postimg.cc/SNGD3sKs/whatsapp.png" alt="Girl in a jacket" style="width:90px; height:100px; border-radius:100%"></span></a>
       </div>
       </div>
-      <div class="modal-footer" style="background-color: springgreen">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >Call ☎️</button>
+      <div class="modal-footer" style="background-color: midnightblue">
+        <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" >Call ☎️</button>
       </div>
     </div>
   </div>
@@ -107,19 +107,18 @@
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header" style="background-color: springgreen">
+      <div class="modal-header" style="background-color: midnightblue">
         <h1 class="modal-title fs-5  glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;">Call to Place Your Order Now</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <img src="https://i.postimg.cc/524YWmV7/call.jpg" alt="Lights" style="width:100%; height:100%">
 
       <div class="modal-body" style="background-color: darkslategrey">
-        <h3  ><a href="tel:+08103652434" style="text-decoration:none; font-weight:900; ; color:white">090571474997</a></h3>
+        <h3 class="glow68" style=" font-family:sans-serif; font-weight:900; color:white ">Dail to Place Your Order Now</h3>
+        <h3  ><a href="tel:08103652434" style="text-decoration:none; font-weight:900; ; color:white">08103652434</a></h3>
 
-        <h3  style=" font-family:sans-serif; font-weight:900 "><a href="tel:+08103652434" style="text-decoration:none; font-weight:900; ; color:white">090571474997</a></h3>
-
-         </div>
-      <div class="modal-footer" style="background-color: springgreen">
+       </div>
+      <div class="modal-footer" style="background-color: midnightblue">
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Chat Us💬</button>
       </div>
     </div>
@@ -127,12 +126,12 @@
 </div>
 <a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Order Now</a>
           </div>
-          <div class="card-footer text-muted"><span style="color: indigo; font-weight:900">Last Updated:</span> 
+          <div class="card-footer text-muted"><span style="color: indigo; font-weight:900">Last Updated:</span>
             <span style="color: green">{{posts.created_on}}</span>
           </div>
         </div>
-      
-      
+
+
         <hr>
 
         <!-- Comments Form -->
@@ -151,7 +150,7 @@
         <!-- Single Comment -->
         {% for comment in comments %}
         <div class="media mb-4" style="background-color: white">
-          
+
           <div class="media-body">
             <h2 class="mt-0" style="text-align: left; font-family:sans-serif; font-weight:900; color: Green"><img style="border-radius: 45%"  height=30px src="https://i.postimg.cc/CKqz2MSY/profile.png"  alt="You Dont Have Data"> {{comment.Commenter}}</h2>
           <h5 style="text-align: left; font-style: italic; color: navy">🎙{{comment.body}}</h5>
@@ -161,9 +160,9 @@
 
 
       <div class="card text-center">
-    
+
     <img src="https://i.postimg.cc/mrC1hW7D/image-processing20210820-24739-1jdhob9.gif" alt="Lights" style="width:100%">
-        
+
       </div>
     </div>
     <br>
@@ -173,7 +172,7 @@
 <div class="container" >
 <div class="container" style="background-color: white">
 
-        <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card" style="background-color: darkslategrey">
               <div class="cup">
@@ -186,7 +185,7 @@
               </div>
           </div>
 
-          
+
           <div class="col">
             <div class="card" style="background-color: darkslategrey">
               <div class="cup">
@@ -258,7 +257,7 @@
           <div class="col">
             <div class="card" style="background-color: darkslategrey">
               <div class="cup">
-              <img height=250 src="https://i.postimg.cc/DZ8vKdHV/hotel.jpg" class="card-img-top" alt="...">
+              <img height=250 src="https://i.postimg.cc/nrdr41jC/hotel-management-systems.jpg" class="card-img-top" alt="...">
               <a href="{% url 'EventHot' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
               </div>
               <div class="card-body">
@@ -295,6 +294,6 @@
       </div>
     </div>
         <br>
-  </div>     
+  </div>
 {% endblock %}
 

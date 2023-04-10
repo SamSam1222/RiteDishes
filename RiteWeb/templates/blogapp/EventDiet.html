@@ -12,7 +12,7 @@
       html {
         font-family: "Open Sans", sans-serif;
       }
-{% comment %}       
+{% comment %}
       h1 {
         color: #444;
       } {% endcomment %}
@@ -39,15 +39,15 @@
         font-family: Arial;
         font-size: 17px;
       }
-      
+
       .food {
         position: relative;
         max-width: 100%;
         margin: 0 auto;
       }
-      
+
       .food img {vertical-align: middle;}
-      
+
       .food .note {
         position: absolute;
         bottom: 0;
@@ -68,7 +68,7 @@
         50% {
           opacity: 0;
         }
-        
+
       }
 
 
@@ -120,7 +120,7 @@
     text-shadow: 0 0 5px gold, 0 0 10px gold,
     0 0 20px gold, 0 0 40px gold;
   }
-   
+
 
   .glow91 {
     text-shadow: 0 0 5px darkslategrey, 0 0 10px darkslategrey,
@@ -136,7 +136,7 @@
   .glow68 {
     text-shadow: 0 0 5px gold, 0 0 10px gold,
     0 0 20px gold, 0 0 40px gold;
-  }   
+  }
 
   .glow977 {
     text-shadow: 0 0 5px white, 0 0 10px white,
@@ -152,9 +152,9 @@
       opacity: 0;
     }
 
-  } 
-  
-  
+  }
+
+
     .blink90 {
       animation: blinker 6s linear infinite;
       color: orange;
@@ -162,7 +162,7 @@
     @keyframes blinker {
       50% {
         opacity: 0;
-      }  
+      }
     }
 
 
@@ -173,7 +173,7 @@
     @keyframes blinker {
       50% {
         opacity: 0;
-      }  
+      }
     }
 
 
@@ -183,12 +183,12 @@
     @keyframes blinker {
       50% {
         opacity: 0;
-      }  
+      }
     }
 
   </style>
 
-    
+
 
   <div class="container-fluid" style="background-color: teal">
     <br>
@@ -198,10 +198,10 @@
       {% comment %} <span class="blink900 glow98">EVENT</span> <span class="blink908 glow98">PL</span> {% endcomment %}
       </div>
   <img src="https://i.postimg.cc/zXwfRc9Y/well_nutritionforrunners_gif-jumbo-v5.gif" alt="Lights" style="width:100%">
-      
+
     </div>
     <br>
-  
+
 </div>
 
 <div class="container-fluid " style="background-color: teal">
@@ -212,7 +212,7 @@
     {% comment %} <span class="blink900 glow98">EVENT</span> <span class="blink908 glow98">PL</span> {% endcomment %}
     </div>
     <div class="card-body">
-      <p class="card-text" style="font-size: 25px; text-align: left;  font-family:sans-serif; font-weight:900;">Are You In Need of a Dietitians, Who Can Advice The 
+      <p class="card-text" style="font-size: 25px; text-align: left;  font-family:sans-serif; font-weight:900;">Are You In Need of a Dietitians, Who Can Advice The
         Old And Young On Foods to Eat to Optimise and Improve Their Health.
       </p>
       <p class="card-text" style="font-size: 25px;  text-align: left;  font-family:sans-serif; font-weight:900;">Look No Further, As We Will Help In Guiding You In The Right Food That Will Be Suitable for You.
@@ -220,7 +220,7 @@
       <p class="card-text" style="font-size: 25px; text-align: left;  font-family:sans-serif; color: midnightblue; font-weight:900;">☎️Call Us Now And Lets Get Started.
       </p>
     </div>
-    
+
   </div>
   <br>
 
@@ -229,14 +229,14 @@
 
 
 <div class="container-fluid" style="background-color: teal">
-    
+
   <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for bodys6 in body %}
         <div class="col">
           <div class="card">
             <img  width=200px, height=400px src="{{bodys6.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> <span style="color:"> {{bodys6.body}}</span></h5>   
+              <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> <span style="color:"> {{bodys6.body}}</span></h5>
                 <small class="text-muted" style="color: DarkSlateGray"> </small>
             </div>
           </div>
@@ -245,7 +245,7 @@
       </div>
       <br>
       <div class="d-grid gap-2 col-6 mx-auto">
-       <button class="btn btn-warning" type="button"><a href="tel:+08103652434" style="text-decoration:none; color: black; font-weight:900;"> ☎️ Call Us Now</a></button>
+       <button class="btn btn-warning" type="button"><a href="tel:08103652434" style="text-decoration:none; color: black; font-weight:900;"> ☎️ Call Us Now</a></button>
       </div>
       <br>
     </div>
