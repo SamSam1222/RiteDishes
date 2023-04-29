@@ -620,24 +620,41 @@
 
   </div>
   <br>
-     <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900">CHEFS</h3>
+     <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900">RiteDishes</h3>
      <h3 style="text-align: center; color: Black; background-color: white;font-weight:900; font-family: cursive">SHARE YOUR MOMENTS IN OUR RESTAURANT</h3>
 
      <div class="container-fluid" style="background-color: grey">
       <br>
     <div class="card text-center">
-
-        <img  width=200px, height=400px src="https://i.postimg.cc/8kyvq3mJ/chef1.jpg" class="card-img-top" alt="...">
+        <a href="{% url 'RitePhoto' %}"><img src="https://i.postimg.cc/yYdRKLqF/cafe2.jpg" alt="Lights" style="width:100%"></a>
+        {% comment %} <img  width=200px, height=400px src="https://i.postimg.cc/8kyvq3mJ/chef1.jpg" class="card-img-top" alt="..."> {% endcomment %}
         <div class="card-body">
-          <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> ROSE GABRIEL </span></h5>
-            <p style="color:grey; text-align:center"> Chef</p>
-          <h5  style="color: darkslategrey; text-align:center; "> Meet Chef Rose Gabriel, One Our Professional Chef That Prepares Our Pastries.
-          </h5>
+          <div class=" glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: darkmagenta">
+            CHECK OUR GALLERY
+          </div>
+          
+          {% comment %} <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> ROSE GABRIEL </span></h5> {% endcomment %}
+          {% comment %} <h5  style="color: darkslategrey; text-align:center; "> View All Our Different 
+          </h5> {% endcomment %}
 
         </div>
 
       </div>
       <br>
+    
+        {% comment %} <div class="container-fluid" >
+          <br>
+        <div class="card text-center">
+        <div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; color: darkmagenta">
+              CHECK OUR GALLERY
+            </div>
+            <a href="{% url 'RitePhoto' %}"><img src="https://i.postimg.cc/yYdRKLqF/cafe2.jpg" alt="Lights" style="width:100%"></a>
+    
+          </div>
+          <br>
+        </div>
+    
+
     <div class="card text-center">
 
         <img  width=200px, height=400px src="https://i.postimg.cc/hPzXNGG6/chef2.jpg" class="card-img-top" alt="...">
@@ -678,11 +695,13 @@
 
         </div>
 
-      </div>
+      </div> {% endcomment %}
       <br>
     </div>
   </div>
-  <div  style="background-color: teal">
+
+
+  {% comment %} <div  style="background-color: teal">
     <br>
 
     <div class="container-fluid" style="background-color: teal">
@@ -697,7 +716,7 @@
       <br>
     </div>
 
-  </div>
+  </div> {% endcomment %}
   <br>
     <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900">CONTACT</h3>
     <h3 style="text-align: center; color: Black; background-color: white;font-weight:900; font-family: cursive">NEED HELP? <span style="color:red; font-family: cursive">CONTACT US </span></h3>
