@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-q=#l@gymv@t01*_8*!q@nron_t^08$g)5uahy+m=e$&+@te4-_
 DEBUG = True
 
 ALLOWED_HOSTS = ['ritedishes.up.railway.app', '127.0.0.1', 'ritedishes.com.ng']
-CSRF_TRUSTED_ORIGINS = ['https://ritedishes.up.railway.app' ]
+CSRF_TRUSTED_ORIGINS = ['https://ritedishes.up.railway.app', 'https://ritedishes.com.ng' ]
 
 
 # Application definition
