@@ -10,7 +10,6 @@ ez-setup==0.9
 gunicorn==20.1.0
 idna==3.4
 mysql-connector-python==8.0.33
-mysqlclient==2.1.1
 packaging==23.1
 Pillow==9.4.0
 protobuf==3.20.3
