@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+from .juzmin import JAZZMIN_SETTINGS
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -35,6 +38,8 @@ ALLOWED_HOSTS = [ '127.0.0.1', 'ritedishes.com.ng']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    'RiteWeb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,13 +49,15 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'RiteCanteen',
-    'RiteWeb',
     'RealCanteen',
     'RiteDrink',
     'Alcholic',
+
     
    
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -173,3 +180,7 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+JAZZMIN_SETTINGS = JAZZMIN_SETTINGS 

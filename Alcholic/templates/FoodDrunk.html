@@ -181,7 +181,7 @@
      }
  
    </style>
-
+{% comment %} 
 
 <div class="container-fluid" style="background-color: teal">
   <br>
@@ -190,7 +190,7 @@
     
   </div>
   <br>
-</div>
+</div> {% endcomment %}
 
 
 <div style="background-color: teal">
@@ -216,7 +216,7 @@
       <div class="card">
         <a href="{% url 'Alcholic:Drank_detail' tools.slug %}"><img  width=200px, height=400px src="{{tools.image.url}}" class="card-img-top" alt="..."></a>
         <div class="card-body">
-          <h5 class="card-title" style="color: indigo; font-weight:900">{{tools.title}}</h5>   
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{tools.title}}   <span class="card-title" style="color: #2C3539; font-weight:900">- ₦{{tools.body2}} </span></h5>   
             <small class="text-muted">🕗 3 mins ago </small>
         </div>
       </div>

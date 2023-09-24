@@ -183,15 +183,6 @@
    </style>
 
 
-<div class="container-fluid" style="background-color: teal">
-  <br>
-<div class="card text-center">
-<img src="https://i.postimg.cc/XJ5DYJkK/drink.gif" alt="Lights" style="width:100%">
-    
-  </div>
-  <br>
-</div>
-
 
 <div style="background-color: teal">
   <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 36px">Alcholic Drink Categories</h3>
@@ -235,7 +226,7 @@
       <div class="card">
         <a href="{% url 'RiteDrink:drink_detail' rites5.slug %}"><img  width=200px, height=400px src="{{rites5.image.url}}" class="card-img-top" alt="..."></a>
         <div class="card-body">
-          <h5 class="card-title" style="color: indigo; font-weight:900">{{rites5.title}}</h5>   
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{rites5.title}} <span class="card-title" style="color: #2C3539; font-weight:900"> - ₦{{rites5.body2}}</span></h5>
             <small class="text-muted">🕗 3 mins ago </small>
         </div>
       </div>

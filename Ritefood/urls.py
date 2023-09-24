@@ -24,6 +24,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('', include('RiteWeb.urls')),
     path('admin/', admin.site.urls),
+    path('', include('django.contrib.auth.urls')),
     path('RealCanteen/', include('RealCanteen.urls')),
     path('RiteCanteen/', include('RiteCanteen.urls')),
     path('RiteDrink/', include('RiteDrink.urls')),
