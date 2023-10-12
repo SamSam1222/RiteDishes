@@ -3,6 +3,8 @@ from .models import Food
 from .forms import CommentForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from RiteWeb.forms import UserForm, UserProfileInfoForm
@@ -82,8 +84,7 @@ def register(request):
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
-
-            registered = True
+            messages.success(request, 'You have singed up successfully.')
             login(request, user)
             return redirect('coke')
 
