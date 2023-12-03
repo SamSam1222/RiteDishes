@@ -39,7 +39,6 @@ ALLOWED_HOSTS = [ '127.0.0.1', 'ritedishes.com.ng']
 
 INSTALLED_APPS = [
     'jazzmin',
-    'RiteWeb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,19 +47,27 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'crispy_bootstrap5',
+    'RiteWeb',
     'RiteCanteen',
     'RealCanteen',
     'RiteDrink',
     'Alcholic',
 
+
     
    
 ]
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

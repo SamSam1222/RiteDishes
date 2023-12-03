@@ -1,4 +1,4 @@
-{% extends 'locatestore.html' %}
+{% extends 'continental.html' %}
   <!-- Page Content -->
   {% block content %}  
       <style>
@@ -184,30 +184,33 @@
   
       </style>
 
-      <div class="container-fluid" style="background-color: teal">
-        <br>
-        <br>
-<div class="container-fluid" style="background-color: teal">
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for bodys34 in body %}
-    <div class="col">
-      <div class="card">
-        <img style="width:100%" src="{{bodys34.image.url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title" style="color: navy; text-align: center; font-weight:900">{{bodys34.title}}</h5>
-            <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/VNLZ8k7y/address.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body }}.</p>
-            <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/8Cc5rLyZ/call.jpg" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body2 }}.</p>
-            <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/T3GRMFZ8/open.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body3 }}.</p>
-            <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/T3GRMFZ8/open.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body4 }}.</p>
-        </div>
+
+
+</div>
+<!-- Promo Section - "We know design" -->
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:40px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">RiteDishes Different Branches</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">Check Out all Our Branches</p>
+ 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  
+  {% for bodys34 in body %}
+  <div class="col">
+    <div class="card">
+      <img src="{{bodys34.image.url}}" alt="New York" style="width:100%; height: 250px" class="card-img-top w3-hover-opacity">
+      <div class="card-body">
+        <h5 class="card-title" style="color: navy; text-align: center; font-weight:900">{{bodys34.title}}</h5>
+        <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/VNLZ8k7y/address.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body }}.</p>
+        <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/8Cc5rLyZ/call.jpg" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body2 }}.</p>
+        <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/T3GRMFZ8/open.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body3 }}.</p>
+        <p class="card-text" style="color: black; font-weight:900"><img src="https://i.postimg.cc/T3GRMFZ8/open.png" width="40" height="40" class="rounded-circle z-depth-0" alt="">{{bodys34.body4 }}.</p>
       </div>
     </div>
-    
   </div>
-
-
   {% endfor %}
-  
+
 </div>
 <br>
 </div>

@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
-from RiteWeb.forms import UserForm, UserProfileInfoForm
 from django.views.generic import CreateView
 # from .models import UserProfileInfo, Contact, AboutUs
 from django.urls import reverse

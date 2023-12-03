@@ -1,10 +1,30 @@
 from django.db import models
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
+
 import os
 from django.urls import reverse
 
 
 
+
+
+class User(models.Model):
+    email = models.EmailField(unique=True)
+    # username = models.CharField(max_length=150, unique=True)
+
+
+    def __str__(self):
+        return self.email
+    
+
+class UserProfileInfo(models.Model):
+    username = models.CharField(max_length=150, null=True, unique=True)
+    Customer_location = models.CharField(max_length=150, null=True, unique=True, blank=False)
+    phone_number = models.CharField(max_length=11, blank=True) 
+
+    def __str__(self):
+        return self.username
+    
     
 # Create your models here.
 class Food(models.Model):
@@ -42,24 +62,7 @@ def path_and_rename(instance, filename):
     return os.path.join(upload_to, filename)
 
 
-class UserProfileInfo(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
-    bio = models.CharField(max_length=150, blank=True)
-    
-    profile_pic = models.ImageField(upload_to=path_and_rename,verbose_name="Profile Picture", blank=True)
-
-    Admin  = 'Admin'
-    Customer = 'Customer'
-    user_types = [
-        (Admin, 'Admin'),
-        (Customer, 'Customer'),
-    ]
-    user_type = models.CharField(max_length=10, choices=user_types, default=Customer)
-    
-    def __str__(self):
-        return self.user.username
-    
+ 
 
 class AboutUs(models.Model):
     image = models.ImageField(upload_to = 'images_uploaded', null=True, blank=True)

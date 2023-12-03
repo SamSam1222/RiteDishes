@@ -1,29 +1,38 @@
-{% extends 'home.html' %}
+{% extends 'continental.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 {% block title %} Contact Us {% endblock %}
 
 {% block content %}
 
-<div  style="background-color:teal">
-  <br>
+
   
 <section >
+</div>
+<!-- Promo Section - "We know design" -->
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:40px 16px; background-color: 	#C0C0C0	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">Contact Us</h1>
+  <p class="w3-center " style="color: #040720	;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">Kindly Send Us a feedback</p>
+ 
+
+
   <div class="container">
     <br>
 
 
     <div class="card mb-3">
       <img src="https://i.postimg.cc/13d2n7hP/cona.jpg" class="card-img-top" alt="...">
-      <div class="card-body" style="background-color: thistle">
+      <div class="card-body" style="background-color: #123456	">
 
         <div class="row justify content center">
           <div class="col-md-12">
             <span class="row d-flex justify-content-center mb-4"><form method="post"></span>
-                <div class="form-group">
+                <div class="form-group" style="color: white">
                   {% csrf_token %}
                   {{form|crispy}}
-                  <span class="row d-flex justify-content-center mb-4"><input type="submit" value="Submit Response" class="btn btn-success font-weight-bold " style=" width: 93%; padding: 10px 32px; "></span>
+                  <span class="row d-flex justify-content-center mb-4"><input type="submit" value="Submit Response" class="btn btn-success font-weight-bold " style=" width: 98%; padding: 10px 32px; "></span>
                 </div>
               </form>
           </div>
@@ -34,6 +43,7 @@
 
          </div>
     </div>
+    <br>
    
    
   

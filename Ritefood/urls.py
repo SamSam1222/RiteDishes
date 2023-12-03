@@ -29,6 +29,8 @@ urlpatterns = [
     path('RiteCanteen/', include('RiteCanteen.urls')),
     path('RiteDrink/', include('RiteDrink.urls')),
     path('Alcholic/', include('Alcholic.urls')),
+    path('api-auth/', include('rest_framework.urls'))
+
 ]
 
 

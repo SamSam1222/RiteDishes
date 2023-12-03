@@ -1,4 +1,5 @@
-{% extends 'pestrilfood.html' %}
+{% extends 'continental.html' %}
+
 {% load static %}
 {% block title %} {% endblock %}
 
@@ -696,90 +697,24 @@ text-shadow: 0 0 5px #004225, 0 0 10px #004225,
 
 
 
-<div class="container-fluid" style="background-color: teal">
-  <br>
-<div class="card text-center">
-
-
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner ">
-      <div class="carousel-item active">
-          <div class="food">
-            <img height=350px src="https://i.postimg.cc/bvdxJpy2/Whats-App-Image-2023-02-26-at-2-38-26-PM.jpg" class="d-block w-100" alt="...">
-            <div style="text-align: left" class="note">
-              <h1 class="glow01">RITEDISHES</h1>
-              <p>We Offer The Best Meal You Can Ever Think Of</p>
-            </div>
-          </div>
-        </div>
-
-      <div class="carousel-item">
-        <div class="food">
-        <img height=350px src="https://i.postimg.cc/L8hvvGYF/pizzza-people.jpg" class="d-block w-100" alt="...">
-        <div style="text-align: left" class="note">
-          <h1 class="glow01">RITEDISHES</h1>
-          <p>Order and Enjoy Our Tasty Pizza</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="food">
-      <img height=350px src="https://i.postimg.cc/13rMXCf4/gif.gif" class="d-block w-100" alt="...">
-      <div style="text-align: left" class="note">
-        <h1 class="glow01">RITEDISHES</h1>
-        <p>Enjoy Free Delivery Of Any Food You Order From Us</p>
-      </div>
-    </div>
-  </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-  </div>
-  <br>
-</div>
 
 
 
-  <section id="best-features" class="text-center">
-  <div style="background-color: teal">
-    <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 37px">PASTRY CATEGORIES</h3>
-    <br>
-  </div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:40px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">PASTRY CATEGORIES</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">RiteDishes is the home of delicious Pastries</p>
+ 
 
-</section>
-
-
-
-<div class="container-fluid" style="background-color: teal">
     <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for rites4 in rite %}
       <div class="col ">
-        <div class=" h-100 card border-success mb-3">
-          <div class="save">
-            <div class="clip">
-          <img src="{{rites4.image.url}}" class="border border-5" alt="..." height="400px" width="100%">
-
-          {% comment %} <img width=150px, height=200px src="{{fish.image.url}}" class="rounded-2" alt="..."> {% endcomment %}
+        <div class=" card">
+          <img  width=200px, height=400px src="{{rites4.image.url}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <div class="text-block glow01">
-              <h4></h4>
-              <h4 style="font-weight:900; text-align: right">₦{{rites4.body2 | slice:':200'}}</h4>
-            </div>
-            <div class="black glow01">
-              <h4></h4>
-              <h4 style="font-weight:900; text-align: right">{{rites4.title}}</h4>
-            </div>
-          </div>
-          </div>
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{rites4.title}} <span class="card-title" style="color: #2C3539; font-weight:900"> - {{rites4.body2}}</span></h5>
+
+    
            
 
 <!-- Example single danger button -->
@@ -788,12 +723,8 @@ text-shadow: 0 0 5px #004225, 0 0 10px #004225,
   <div class="modal-dialog " >
     <div class="modal-content " >
       <div class="modal-header" style="background-color: #033E3E; border-color:  #033E3E">
-        {% comment %} <span class=" glow21" id="exampleModalToggleLabel"  style=" font-family:sans-serif; font-weight:900;  color:white;"><img width="50" height="50" src='https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png' border='0' alt='imageonline-co-emojiadded'/> RITEDISHES <br>ONLINE   <img width="21" height="21" src="https://img.icons8.com/glyph-neue/64/40C057/approval.png" alt="approval"/></span>  {% endcomment %}
       <img src="https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png" width="50" height="50" style="   margin-right: 15px; margin-bottom: 13px;"  alt="" align="left"> 
       <h5 style="text-align: left; color: white; font-weight: 900" >RITEDISHES <img width="21" height="21" style="margin-bottom: 5px" src="https://img.icons8.com/glyph-neue/64/40C057/approval.png" alt="approval"/> <BR><span style="font-size: 20px;  font-weight: normal;font-family: Courier New">Online</span></h5>
-{% comment %}         
-        <img width="50" height="50" src='https://i.postimg.cc/GtCZ5Cb0/imageonline-co-emojiadded.png' border='0' alt='imageonline-co-emojiadded'/>
-       <br> <h6 style="color: white; text-align: center">RITEDISHES<br><span style="font-size: 20px; color: white"> Online</span></h6> {% endcomment %}
         
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"  aria-label="Close"></button>
       </div>
@@ -814,7 +745,6 @@ text-shadow: 0 0 5px #004225, 0 0 10px #004225,
 
       <div class="modal-footer" style="background-color: #2E1A47	">
         <span  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" ><image height="50px" src="https://i.postimg.cc/T3grHwLg/csllnow-modified.png"></span>
-        {% comment %} <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" ><h4 style=" font-weight: 900"> <img style="margin-right: 2px; margin-bottom: 5px;" height="25" src="https://i.postimg.cc/yNRCdFfq/telephone.png"> Call Us</h4></button> {% endcomment %}
       </div>
     </div>
   </div>
@@ -846,7 +776,6 @@ text-shadow: 0 0 5px #004225, 0 0 10px #004225,
       <div class="modal-footer" style="background-color: #2E1A47	">
      <a style="text-decoration: none"> <button data-bs-target="#exampleModalToggle" data-bs-toggle="modal"  type="button" class="btn" style="display: table; font-family: sans-serif; text-decoration: none; margin: 0em auto; color: white; font-size: 20px; padding: 8px 15px; border-radius: 2em; font-weight: bold; background-color: #25d366"> <img style="margin-right: 2px; margin-bottom: 5px;" height=25px src="https://tochat.be/click-to-chat-directory/css/whatsapp.svg"><span style="color: black"> Chat Us</span></button></a>
 
-        {% comment %} <button style="border-radius: 10px" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><h3 style="font-size: 25px; font-weight: 900"><img height=25px src="https://tochat.be/click-to-chat-directory/css/whatsapp.svg"> Chat Us</h3> </button> {% endcomment %}
       </div>
     </div>
   </div>
@@ -855,151 +784,15 @@ text-shadow: 0 0 5px #004225, 0 0 10px #004225,
   <br>
   <div class="d-grid gap-2 col-6 mx-auto">
     <a type="submit" class="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle" style="font-weight: bold; ">ORDER NOW</a>
-    {% comment %} <a class=" button9" data-bs-toggle="modal"  href="#exampleModalToggle" role="button" style="color:white; font-size: 15px">ORDER NOW</a> {% endcomment %}
-
 
 
 <!-- Modal -->
   </div>
 </div>
     </div>
+
   </div>
 </div>
       {% endfor %}
-
-  </div>
-
-  <br>
-  <div class="container text-center" >
-  <h1 style="color:white">You might also like:</h1>
-  <br>
-
-  <div class="container" style="background-color: white">
-
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-              <img height=250 src="https://i.postimg.cc/ryj1TkBf/peopl-dey-eat.jpg" class="card-img-top" alt="...">
-              <a href="{% url 'coke' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900; "> FAST MENU</h5>
-              </div>
-            </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-
-              <img height=250 src="https://i.postimg.cc/rs7XFsC6/event-image.jpg" class="card-img-top" alt="...">
-              <a href="{% url 'EventPlan' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Event Planning</h5>
-              </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/1t1CNSTY/wed.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventWed' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Wedding Ceremony</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/RFv1BZ29/birthday-parties.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventBirth' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Birthday Ceremony</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/xTFXR3QL/naming.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventName' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Naming Ceremony</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/6qbX2mqL/ANN.png" class="card-img-top" alt="...">
-            <a href="{% url 'EventAnn' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Anniversary Celebration</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/BQbGryB6/dieting.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventDiet' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Suitable Diet For You</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/nrdr41jC/hotel-management-systems.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventHot' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Hotel Management</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="background-color: darkslategrey">
-            <div class="cup">
-            <img height=250 src="https://i.postimg.cc/3JnpTp8K/cafeteria.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventCaf' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Cafeteria Management</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card"style="background-color: darkslategrey" >
-             <div class="cup">
-              <img height=250 src="https://i.postimg.cc/3NmZLqJ5/655waiter.jpg" class="card-img-top" alt="...">
-              <a href="{% url 'EventRender' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Meet Our Waiter/Waitress</h5>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-    </div>
-  </div>
-      <br>
-  </div>
-  </div>
-
     {% endblock %}
 

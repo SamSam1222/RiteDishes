@@ -1,4 +1,4 @@
-{% extends 'gallery.html' %}
+{% extends 'continental.html' %}
 {% load static %}
 {% block title %} {% endblock %}
 
@@ -190,54 +190,33 @@
 
     
 
+</div>
+<!-- Promo Section - "We know design" -->
 
+<!-- Team Section -->
+<div class="w3-container" style="padding:40px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">RiteDishes Gallery</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">Check Out all moment of Our Customers</p>
+ 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  
+{% for photos1 in photo %}
+  <div class="col">
+    <div class="card">
+      <img src="{{photos1.image.url}}" alt="New York" style="width:100%; height: 250px" class="card-img-top w3-hover-opacity">
+      <div class="card-body">
+        <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> <span style="color:#033E3E	"> {{photos1.body}}</span></h5>   
 
-{% comment %} <div class="container-fluid" style="background-color: teal">
-  <br>
-<div class="card text-center">
-<div>
-    </div>
-{% for bodys2 in body %}
-
-<img src="{{bodys2.image.url}}" alt="" style="width:100%">
-<br>
-
-{% endfor %}
-  </div>
-  <br>
-</div> {% endcomment %}
-     {% comment %} <br> {% endcomment %}
-
-     <div style="background-color: white">     
-
-  <h3 style="text-align: center; background-color: white;  color: ORANGE; font-weight:900"><br>RiteDishes<br>
-  <span style="text-align: center; color: Black; background-color: white;font-weight:900; font-family: cursive">SHARE YOUR MOMENTS IN OUR RESTAURANT</span>
-  <br>
-  <br>
-</h3>
-  <div class="container-fluid" style="background-color: grey">
-    
-   <br>
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for photos1 in photo %}
-        <div class="col">
-          <div class="card">
-            <img  width=200px, height=400px src="{{photos1.image.url}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> <span style="color:darkmagenta"> {{photos1.body}}</span></h5>   
-                <small class="text-muted" style="color: DarkSlateGray"> </small>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
       </div>
-      <br>
-      
-      <br>
     </div>
+  </div>
+  {% endfor %}
 
-
-
-{%endblock%}
-
+</div>
 <br>
+</div>
+
+
+
+{% endblock %}
+

@@ -4,12 +4,12 @@ from .forms import CommentForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
-from RiteWeb.forms import UserForm, UserProfileInfoForm
+from RiteWeb.forms import CustormerForm
+from RiteWeb.forms import  UserProfileInfoForm
 from django.views.generic import CreateView
-from .models import UserProfileInfo, Contact, AboutUs, EPLANNING, EWEDDING, EBIRTHDAY,  ENAMING, EANNIVERSARY, EDIETING, EHOTEL, ECAFETERIA, ERENDERING, RiteGallery, Location
+from .models import  User, Contact, AboutUs, EPLANNING, EWEDDING, EBIRTHDAY,  ENAMING, EANNIVERSARY, EDIETING, EHOTEL, ECAFETERIA, ERENDERING, RiteGallery, Location
 from django.urls import reverse
 
 # Create your views here.
@@ -21,6 +21,8 @@ def coke(request):
     post = Food.objects.all()
     return render(request,'coke.html', {'posts': post})
 
+def home(request):
+    return render(request,'base.html')
 
 
 def blog_detailView(request, slug):
@@ -53,11 +55,11 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request,user)
-                return HttpResponseRedirect(reverse('coke'))
+                return HttpResponseRedirect(reverse('home'))
             else:
                 return HttpResponse("ACCOUNT IS DEACTIVATED")
         else:
-            return HttpResponse("please use correct id and password")
+            return HttpResponse("please use correct username and password")
         
     else:
         return render(request, 'blogapp/login.html')
@@ -65,14 +67,15 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('coke'))
+    return HttpResponseRedirect(reverse('home'))
+
 
 def register(request):
 
     registered = False
 
     if request.method == "POST":
-        user_form = UserForm(data=request.POST)
+        user_form = CustormerForm(data=request.POST)
         profile_form = UserProfileInfoForm(data=request.POST)
         
 
@@ -86,12 +89,12 @@ def register(request):
             profile.save()
             messages.success(request, 'You have singed up successfully.')
             login(request, user)
-            return redirect('coke')
+            return redirect('home')
 
         else:
-            print(user_form.errors, profile_form.errors)
+            messages.error(request, user_form.errors)
     else:
-        user_form = UserForm()
+        user_form = CustormerForm()
         profile_form = UserProfileInfoForm()
 
     return render(request, 'blogapp/register.html',
@@ -99,14 +102,10 @@ def register(request):
                              'user_form':user_form,
                              'profile_form':profile_form})
 
-class HomeView(TemplateView):
-    template_name = 'blogapp/coke.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        Admin = UserProfileInfo.objects.filter(user_type='Admin')
-        context['Admin'] = Admin
-        return context
+
+
+
 
 class ContactView(CreateView):
     model = Contact

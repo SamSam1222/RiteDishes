@@ -1,4 +1,4 @@
-{% extends 'foodCon.html' %}
+{% extends 'continental.html' %}
 {% load static %}
 {% block title %} {% endblock %}
 
@@ -460,51 +460,20 @@
 
 
 
-<div class="container-fluid" style="background-color: teal">
-  <br>
-<div class="card text-center">
-<div class="card-header " style=" font-size: 25px;  font-family:sans-serif; font-weight:900; background-color: aquamarine; color: DarkSlateGray">
-      <span class="blink900 glow68"> EAT WELL</span> <span class="blink908 glow68">LIVE WELL</span>
-    </div>
-<img src="https://i.postimg.cc/bJcMTN0T/work2.gif" alt="Lights" style="width:100%">
-
-  </div>
-  <br>
-</div>
-
-
-
-  <section id="best-features" class="text-center">
-  <div style="background-color: DarkSlateGray">
-    <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 37px">FRUITS CATEGORIES</h3>
-    <br>
-
-</section>
-
-
-
-<div class="container-fluid" style="background-color: DarkSlateGray">
+<!-- Team Section -->
+<div class="w3-container" style="padding:40px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">FRUITS CATEGORIES</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">RiteDishes is the home of varities of fruits</p>
+ 
     <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for fish in fishs %}
       <div class="col ">
-        <div class=" h-100 card border-success mb-3">
-      <div class="save">
-      <div class="clip">
-          <img src="{{fish.image.url}}" class="border border-5" alt="..." height="400px" width="100%">
-          <div class="text-block glow01">
-            <h4></h4>
-            <h4 style="font-weight:900; text-align: right">{{fish.title}}</h4>
-          </div>
-          <div class="black glow01">
-            <h4></h4>
-            <h4 style="font-weight:900; text-align: right">₦{{fish.body2 | slice:':200'}}</h4>
-          </div>
-        </div>
-        </div>
-    
-          {% comment %} <img width=150px, height=200px src="{{fish.image.url}}" class="rounded-2" alt="..."> {% endcomment %}
-            {% comment %} <p class="card-text"><span style="color: midnightblue"><b>PRICE:</b></span> <span style="color: black">{{fish.body2 | slice:':200'}}</span></p> {% endcomment %}
+        <div class=" card">
+          <img  width=200px, height=400px src="{{fish.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+          <h5 class="card-title" style="color: indigo; font-weight:900">{{fish.title}} <span class="card-title" style="color: #2C3539; font-weight:900"> - {{fish.body2}}</span></h5>
 
+    
 
 <!-- Example single danger button -->
 
@@ -588,139 +557,7 @@
 </div>
     </div>
   </div>
+</div>
       {% endfor %}
-</div>
-
-<br>
-<div class="container text-center" >
-<h1 style="color:white">You might also like:</h1>
-<br>
-
-<div class="container" style="background-color: white">
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-            <img height=250 src="https://i.postimg.cc/ryj1TkBf/peopl-dey-eat.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'coke' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900; ">FAST MENU</h5>
-            </div>
-          </div>
-      </div>
-
-
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-
-            <img height=250 src="https://i.postimg.cc/rs7XFsC6/event-image.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventPlan' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Event Planning</h5>
-            </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/1t1CNSTY/wed.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventWed' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Wedding Ceremony</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/RFv1BZ29/birthday-parties.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventBirth' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Birthday Ceremony</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/xTFXR3QL/naming.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventName' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Naming Ceremony</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/6qbX2mqL/ANN.png" class="card-img-top" alt="...">
-          <a href="{% url 'EventAnn' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Anniversary Celebration</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/BQbGryB6/dieting.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventDiet' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Suitable Diet For You</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/nrdr41jC/hotel-management-systems.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventHot' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Hotel Management</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="background-color: darkslategrey">
-          <div class="cup">
-          <img height=250 src="https://i.postimg.cc/3JnpTp8K/cafeteria.jpg" class="card-img-top" alt="...">
-          <a href="{% url 'EventCaf' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Cafeteria Management</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card"style="background-color: darkslategrey" >
-           <div class="cup">
-            <img height=250 src="https://i.postimg.cc/3NmZLqJ5/655waiter.jpg" class="card-img-top" alt="...">
-            <a href="{% url 'EventRender' %}"><button type="button" class="btn btn-warning blink29 " >View</button></a>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title glow20" style=" font-family:sans-serif; font-weight:900">Meet Our Waiter/Waitress</h5>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-  </div>
-</div>
-<br>
-</div>
-
     {% endblock %}
 

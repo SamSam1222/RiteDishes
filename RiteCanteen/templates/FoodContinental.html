@@ -174,113 +174,70 @@
       }  
     }
 
+
+    .ribbon {
+      position: fixed;
+      inset: 0 auto auto 0;
+      background: #08769b;
+    }
   </style>
 
     
 
-<div class="container-fluid" style="background-color: teal">
-  <br>
-<div class="card text-center">
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner ">
-      <div class="carousel-item active">
-          <div class="food">
-            <img height=350px src="https://i.postimg.cc/L51mDMj9/serve33.jpg" class="d-block w-100" alt="...">
-            <div class="note">
-              <h1 style="text-align: left"class="glow01">RITEDISHES</h1>
-              <p style="text-align: left">We Offer The Best Meal You Can Ever Think Of</p>
-            </div>
-          </div>
-        </div>
-      <div class="carousel-item">
-        <div class="food">
-        <img height=350px src="https://i.postimg.cc/q72MVKRs/serve21.jpg" class="d-block w-100" alt="...">
-        <div class="note">
-          <h1 style="text-align: left"class="glow01">RITEDISHES</h1>
-          <p style="text-align: left">Enjoy Our Tasty Meal 😋 </p>
-        </div>
-      </div>
-      </div>
-      <div class="carousel-item">
-        <div class="food">
-        <img height=350px src="https://i.postimg.cc/6qMTtYfZ/inter.jpg" class="d-block w-100" alt="...">
-        <div class="note">
-          <h1 style="text-align: left"class="glow01">RITEDISHES</h1>
-          <p style="text-align: left">Enjoy Our Tasty Meal 😋 </p>
-        </div>
-      </div>
-      </div>
-      <div class="carousel-item">
-        <div class="food">
-        <img height=350px src="https://i.postimg.cc/Yq1zDnN8/delboy.gif" class="d-block w-100" alt="...">
-        <div class="note">
-          <h1 style="text-align: left"class="glow01">RITEDISHES</h1>
-          <p style="text-align: left">Enjoy Free Delivery Of Any Food You Order From Us</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  </div>
-</div>
-  <br>
-</div>
 
-  <div style="background-color: teal">
-    <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 28px">Inter-Continental Dishes</h3>
-    <br>
-  </div>
-    
-<div class="container-fluid" style="background-color: teal">
 
-  <div class="card text-center">
-    <div class=" cup">
-      <img src="https://i.postimg.cc/W4Dss762/inter2.jpg" width="100%" class="img-fluid " alt="...">
-      <a href="{% url 'RealCanteen:FoodContinental2' %}"><button type="button" class="btn btn-warning blink29 " ><span style="color: midnightblue; font-size: 20px; font-weight:900">View</span></button></a>
+
+</div>
+<!-- Promo Section - "We know design" -->
+<div class="w3-container " style="padding:115px 16px; background-color: 	 #36454F	;">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h1 style="font-family: Georgia; font-weight: 600; color: white;">Inter-Continental Dishes</h1>
+      <p style="font-family: Comic sans ms; font-weight: 200; color: white;" class="w3-large w3-hide-small">RiteDishes provides you with all the varities of tasty and delicious Inter-Continental Dishes.</p>
+      <p style="margin-top: -1px;" class="w3-hide-small"><a href="{% url 'RealCanteen:FoodContinental2' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Inter-Continental Dishes</a></p><br>
     </div>
-    <div class="card-body">
-      <h6 class="card-title glow98" style="color: midnightblue; font-weight:900; text-align: center; font-size: 25px">INTER-CONTINENTAL DISHES</h6>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="https://i.postimg.cc/dtxNTPgF/imageonline-co-gifimage-2.gif" alt="Buildings" width="700" height="394" style="  border: 1px solid #FFFFFF	;     ">
+      <br>
+      <br>
+      <p style="font-family: Comic sans ms; font-weight: 200; color: white;" class="w3-hide-large">RiteDishes provides you with all the varities of tasty and delicious Continental and Inter-Continental Dishes.</p>
+      <p style="margin-top: -1px;" class="w3-hide-large"><a href="{% url 'RealCanteen:FoodContinental2' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Inter-Continental Dishes</a></p><br>
+
+
     </div>
   </div>
-  <br>
 </div>
-
-</section>
-
-
-  <section id="best-features" class="text-center">
-  <div style="background-color: teal">
-    <h3 class="glow977" style="background-color: orange;font-weight:900; text-align:center; font-size: 36px">Continental Dishes</h3>
-    <br>
-  </div>
-    
-
-</section>
-<div class="container-fluid" style="background-color: teal">
-    
-  <div class="row row-cols-1 row-cols-md-2 g-4">
+</div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:60px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		">Continental Dishes</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">RiteDishes is the home of delicious Continental Dishes</p>
+ 
+ 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
 {% for post2 in posts %}
+
     <div class="col">
       <div class="card">
-         </a>
-        <a href="{% url 'RiteCanteen:food_detail' post2.slug %}"><img  width=200px, height=400px src="{{post2.image.url}}" class="card-img-top" alt="..."></a>
+        <img src="{{post2.image.url}}" alt="New York" style="width:100%; height: 250px" class="card-img-top w3-hover-opacity">
         <div class="card-body">
-          <h5 class="card-title" style="color: indigo; font-weight:900">{{post2.title}} </h5>   
-            <small class="text-muted">🕗 3 mins ago </small>
+          <h5 class="card-title"><b>Continental Dishes</b></h5>
+          <p class="card-text" style="font-size: 13px; color: #123456; font-weight: 600;">{{post2.title}} - ₦{{post2.body}}</p>
+         <a href="{% url 'RiteCanteen:food_detail' post2.slug %}"> <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Order Now</button></a>
         </div>
       </div>
     </div>
     {% endfor %}
-  </div>
-  <br>
-</div>
-{%endblock%}
 
+
+  </div>
+</div>
+  
+
+
+
+
+
+</section>
+{%endblock%}
+    

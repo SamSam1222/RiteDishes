@@ -1,4 +1,4 @@
-{% extends 'eventHotel.html' %}
+{% extends 'continental.html' %}
 {% load static %}
 {% block title %} {% endblock %}
 
@@ -190,45 +190,33 @@
 
 
 
-  <div class="container-fluid" style="background-color: teal">
-    <br>
-  <div class="card text-center">
-  <div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; background-color: indianred; color: DarkSlateGray">
-      <marquee class=" glow989" behavior="scroll" direction="left"><span style=" color: white; font-weight:bold;  font-variant: small-caps; font-style: italic"> CALL US TO HELP YOU PLAN AND MAKE YOUR HOTEL AN OUTSIDING ONE</span></marquee>
-      {% comment %} <span class="blink900 glow98">EVENT</span> <span class="blink908 glow98">PL</span> {% endcomment %}
-      </div>
-  <img src="https://i.postimg.cc/c4HVMgdX/hotel1.png" alt="Lights" style="width:100%">
+    <!-- Promo Section - "We know design" -->
+<div class="w3-container " style="padding:115px 16px; background-color: 	 #36454F	;">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h1 style="font-family: Georgia; font-weight: 600; color: white;">Hotel Management</h1>
+      <p style="font-family: Arial ; font-weight: 200; color: white;" class="w3-large w3-hide-small"> CALL US TO HELP YOU PLAN AND MAKE YOUR HOTEL AN OUTSIDING ONE.</p>
+      <p style="margin-top: -1px;" class="w3-hide-small"> <a href="tel:08103652434" class="w3-button w3-black" style="text-decoration: none; color: white; font-weight: 600;"><img style="margin-left: -9px" src="https://i.postimg.cc/cJFBF1Qx/telephone-icon1-modified.png" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Call Us Now </a></p><br>
 
     </div>
-    <br>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="https://i.postimg.cc/c4HVMgdX/hotel1.png" alt="Buildings" width="700" height="394" style="height: 350px;  border: 1px solid #FFFFFF	;     ">
+      <br>
+      <br>
+      <p style="font-family: Arial; font-weight: 200; color: white;" class="w3-hide-large"> CALL US TO HELP YOU PLAN AND MAKE YOUR HOTEL AN OUTSIDING ONE.</p>
+      <p style="margin-top: -1px;" class="w3-hide-large"> <a href="tel:08103652434" class="w3-button w3-black" style="text-decoration: none; color: white; font-weight: 600;"><img style="margin-left: -9px" src="https://i.postimg.cc/cJFBF1Qx/telephone-icon1-modified.png" width="40" height="40" class="rounded-circle z-depth-0" alt=""> Call Us Now </a></p><br>
 
-</div>
+      <p></p>
 
-<div class="container-fluid " style="background-color: teal">
-  <br>
-<div class="card text-center">
-<div class="card-header glow98" style=" font-size: 25px;  font-family:sans-serif; font-weight:900; background-color: indianred; color: DarkSlateGray">
-    <marquee class=" glow989" behavior="scroll" direction="left"><span style=" color: white; font-weight:bold;  font-variant: small-caps; font-style: italic"> CALL US TO HELP YOU PLAN AND MAKE YOUR HOTEL AN OUTSIDING ONE </span></marquee>
-    {% comment %} <span class="blink900 glow98">EVENT</span> <span class="blink908 glow98">PL</span> {% endcomment %}
     </div>
-    <div class="card-body">
-      <p class="card-text" style=" font-size: 25px;text-align: left;  font-family:sans-serif; font-weight:900;">Are You In Need Of A Hotel Manager
-         Advice On How To Manage The Activities Of Your Hotel.</p>
-      <p class="card-text" style="font-size: 25px;  text-align: left;  font-family:sans-serif; font-weight:900;">Look No Further, As We Will Help In Guiding You In The Right Way Of <span style="color:red">Planning</span>, <span style="color:purple">Marketing</span>, <span style="color:blue">Coordinating</span> And <span style="color:green">Administrating Hotel Service</span> Such As Catering
-        And Accommodation Facilities.
-      </p>
-      <p class="card-text" style="font-size: 25px;   font-family:sans-serif; color: midnightblue; font-weight:900;">☎️Call Us Now And Lets Get Started.
-      </p>
-    </div>
-
   </div>
-  <br>
-
 </div>
-
-
-
-<div class="container-fluid" style="background-color: teal">
+</div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:60px 16px; background-color: #DADBDD	" id="team" >
+  <h1 class="w3-center" style="font-family: Georgia; font-weight: 900; color: #000000		"> Hotel Management</h1>
+  <p class="w3-center " style="color: #2C3539		;font-variant-caps: ; font-family: Rockwell; font-size: 20px;">Call us now and lets help you to guide you on how to manage your hotel.</p>
+ 
 
   <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for bodys8 in body %}
@@ -236,22 +224,14 @@
           <div class="card">
             <img  width=200px, height=400px src="{{bodys8.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title" style="color: black; text-align:center; font-weight:900"> <span style="color:"> {{bodys8.body}}</span></h5>
+             <p class="card-title" style="color: black; text-align:center; font-weight:900; font-size: 14px"> <span style="color:"> {{bodys8.body}}</span></p>
                 <small class="text-muted" style="color: DarkSlateGray"> </small>
             </div>
           </div>
         </div>
         {% endfor %}
       </div>
-      <br>
-      <div class="d-grid gap-2 col-6 mx-auto">
-       <button class="btn btn-warning" type="button"><a href="tel:08103652434" style="text-decoration:none; color: black; font-weight:900;"> ☎️ Call Us Now</a></button>
-      </div>
-      <br>
-    </div>
-
+    
 
 
 {%endblock%}
-
-<br>
