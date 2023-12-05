@@ -101,20 +101,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Ritefood.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': 'W3OXZteVqURGIgAV15sf',
-#         'HOST': 'containers-us-west-7.railway.app',
-#         'PORT': '6020',
-#     }
-# }
-
 
 DATABASES = {
     'default': {
@@ -123,21 +109,6 @@ DATABASES = {
     }
 }
 
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'railway',
-#         'USER': 'root',
-#         'PASSWORD': '5GpVRMaaSxdwrpbsK5QN',
-#         'HOST': 'containers-us-west-42.railway.app',
-#         'PORT': '8034',
-#     }
-# }
-
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
